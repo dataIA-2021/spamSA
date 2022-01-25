@@ -1,0 +1,15 @@
+
+
+MYSQL: 
+    user: 'de_boynes'
+    password: "2d049853960c21cc9393d5c888cb17cbe9a50e322e317c8e1d236a6dc664ba30"
+    host: "127.0.0.1"
+    port: 3306
+    database: 'bdd_de_boynes'
+    
+PG:
+    user: 'de_boynes'
+    password: "2d049853960c21cc9393d5c888cb17cbe9a50e322e317c8e1d236a6dc664ba30"
+    host: "localhost"
+    port: 5432
+    database: 'de_boynes'
