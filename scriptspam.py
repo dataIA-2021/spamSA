@@ -99,9 +99,9 @@ grouped = df.groupby(df.label)
 dfspam= grouped.get_group("spam")
 
 #print(dfspam)
-#dfspam.count()
+dfspam.count()
 
-df3 = dfspam['message'].str.lower()
+df3 = dfspam.message.str.lower()
 print(df3)
 
 #Palette
@@ -209,7 +209,7 @@ for i in df["Lemmatized_Text"]:
 corpus[:5]
 print("\033[1m\u001b[45;1m The First 5 lines in corpus :\033[0m",*corpus[:5], sep = "\n")
 
-'''
+
 
 #Changing text data in to numbers. 
 tfidf = TfidfVectorizer()
@@ -257,7 +257,7 @@ y = dfe
 X =df[['length','free','phone','prize','give','devise']]
 
 
-'''
+
 
 from wordcloud import WordCloud
 spam_wordcloud = WordCloud(width=600, height=400).generate(" ".join(dfspam['message']))
