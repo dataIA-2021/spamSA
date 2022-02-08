@@ -22,4 +22,5 @@ def detect():
     result= {'sms':sms, 'result':['ham','spam'][int(y[0])]}
     return result
 
-app.run()
+#~ app.run()
+app.run(host='0.0.0.0', debug=True)

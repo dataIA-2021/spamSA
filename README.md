@@ -17,3 +17,11 @@ pip install -r requirements.txt
 python app.py
 
 GET http://localhost:5000/detect?sms=Ceci%20est%20mon%20test...
+
+#------------------------------------------------
+Sur AWS: 
+Ouvrir le port 5000...
+
+sudo apt update
+sudo apt install pip
+pip install -r requirements.txt
