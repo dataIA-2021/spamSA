@@ -13,3 +13,4 @@ pillow
 scipy
 #sqlalchemy-migrate
 camelot
+sklearn
