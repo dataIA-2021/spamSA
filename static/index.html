@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <h3>SMS spam</h3>
+    <form id='myForm'>
+      SMS: <input name='sms'></input>
+    </form>
+    <div id='result'></div>
+    <script>
+    $('#myForm').submit(function() {
+      
+      $.get('/detect?'+$(this).serialize(), function(data){
+	console.log(data);
+	$('#result').html("SMS: "+data.sms+"<br/>result: <b>"+data.result+"</b>")
+	
+      })
+      
+      return false;
+    });
+    </script>
+  </body>
+</html>
