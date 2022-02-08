@@ -5,3 +5,15 @@ Présentation google slide https://docs.google.com/presentation/d/1RMnDL_S0ykDLH
 
 
 Trello: https://trello.com/b/nDqT2iMw/spam
+
+
+Installation environnement:
+
+conda create -n spam python=3.8
+conda activate spam
+
+pip install -r requirements.txt
+
+python app.py
+
+GET http://localhost:5000/detect?sms=Ceci%20est%20mon%20test...
