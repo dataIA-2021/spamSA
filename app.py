@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from flask import Flask, request
 import pickle
 #~ from sklearn.base import BaseEstimator,TransformerMixin
@@ -12,15 +14,19 @@ from sklearn.linear_model import LogisticRegression
 
 app = Flask(__name__)
 
+global n, pipe
+n=0
+pipe = pickle.load(open('LR.pickle', 'rb'))
+print(pipe)
+
 @app.route("/detect")
 def detect():
+    global n, pipe
     sms = request.args.get('sms')
-    pipe = pickle.load(open('LR.pickle', 'rb'))
-    print(pipe)
     y = pipe.predict([[sms]])
-    print(y)
-    result= {'sms':sms, 'result':['ham','spam'][int(y[0])]}
+    n+=1
+    result= {'sms':sms, 'result':['ham','spam'][int(y[0])], 'n':n}
     return result
 
 #~ app.run()
-app.run(host='0.0.0.0', debug=True)
+app.run(host='0.0.0.0', debug=False)

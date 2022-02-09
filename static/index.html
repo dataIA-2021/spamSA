@@ -1,22 +1,32 @@
 <html>
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <h3>SMS spam</h3>
+    
+    <!-- Le formulaire -->
     <form id='myForm'>
       SMS: <input name='sms'></input>
     </form>
+
+    <!-- div pour l'affichage du résultat -->
     <div id='result'></div>
+
+    <!-- Gestion de la validation du formulaire -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+    // Callback de validation (submit)
     $('#myForm').submit(function() {
-      
+
+      // Requète GET sur /detect avec ajout du paramètre (sms)
       $.get('/detect?'+$(this).serialize(), function(data){
 	console.log(data);
+	// MaJ du div#result
 	$('#result').html("SMS: "+data.sms+"<br/>result: <b>"+data.result+"</b>")
 	
       })
-      
+      // empèche le chargement de la page suite au submit
       return false;
     });
     </script>
+
   </body>
 </html>

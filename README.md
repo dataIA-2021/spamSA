@@ -24,4 +24,7 @@ Ouvrir le port 5000...
 
 sudo apt update
 sudo apt install pip
+git clone -b testAPI https://github.com/dataIA-2021/spamSA.git
+cd spamSA
 pip install -r requirements.txt
+python3 app.py
