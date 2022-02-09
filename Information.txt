@@ -1,0 +1,6 @@
+
+pandas
+re
+matplolib
+pycaret
+pickle

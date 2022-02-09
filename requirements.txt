@@ -1,0 +1,16 @@
+panda
+flask
+chardet
+#SQLAlchemy==0.9.6
+colorama
+keyring
+oauthlib
+python-dateutil
+Sphinx
+PyYAML
+pyyaml
+pillow
+scipy
+#sqlalchemy-migrate
+camelot
+sklearn
