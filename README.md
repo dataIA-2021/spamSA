@@ -28,3 +28,7 @@ git clone -b testAPI https://github.com/dataIA-2021/spamSA.git
 cd spamSA
 pip install -r requirements.txt
 python3 app.py
+
+
+# Création de l'image docker:
+docker build -t myhello .
